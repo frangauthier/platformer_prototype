@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: FarGround
+    uniqueID: 2240819991
+    locked: 0
+  - name: MiddleGround
+    uniqueID: 1498989565
+    locked: 0
+  - name: Ground
+    uniqueID: 2134830163
+    locked: 0
+  - name: Characters
+    uniqueID: 464651873
+    locked: 0
+  - name: ForeGround
+    uniqueID: 1157429267
     locked: 0
