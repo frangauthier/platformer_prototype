@@ -808,6 +808,7 @@ GameObject:
   - component: {fileID: 1095746081}
   - component: {fileID: 1095746080}
   - component: {fileID: 1095746085}
+  - component: {fileID: 1095746086}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -945,10 +946,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1095746079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d507d06d6f0591348afcc5fbc92b7b8f, type: 3}
+  m_Script: {fileID: 11500000, guid: ef4c17c8a956ff54aa773427930009a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 3
+  maxSpeed: 5
+  jumpForce: 7
+  groundChecker: {fileID: 1559461777}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!95 &1095746086
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095746079}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 934fe3215273fb8418cdae4bc98576a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1118112573
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,7 +1037,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7943925, y: 1}
+    m_SensorSize: {x: 2.0859683, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
