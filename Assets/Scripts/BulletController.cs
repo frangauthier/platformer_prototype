@@ -43,10 +43,10 @@ public class BulletController : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Shootable") || collision.gameObject.tag == "Shootable")
         {
-            //Instantiate(explosionEffect, transform.position, collision.transform.rotation);
+            Instantiate(explosionEffect, transform.position, collision.transform.rotation);
             rb2d.velocity *= 0.01f;
             gameObject.GetComponent<AudioSource>().PlayOneShot(explosionAudioClip);
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject, 0.2f);
 
             EnemyController enemyController = collision.gameObject.GetComponent<EnemyController>();
             if(enemyController)
