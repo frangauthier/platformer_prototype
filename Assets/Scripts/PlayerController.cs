@@ -105,7 +105,6 @@ public class PlayerController : MonoBehaviour
     {
         if (Time.time > nextFire)
         {
-            TakeDamage(1);
             nextFire = Time.time + fireRate;
 
             if (transform.localScale.x > 0)
