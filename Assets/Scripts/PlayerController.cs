@@ -48,7 +48,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxisRaw("Fire1") > 0)
         {
             FireBullet();
-            CoinCounter.AddCoin(1);
         }
 
     }

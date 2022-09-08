@@ -11,14 +11,13 @@ public class CoinCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CoinText = GetComponent<TextMeshProUGUI>();
-        CoinText.text = "test";
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        CoinText.text = coinCount.ToString();
+        CoinText.text = CoinCounter.coinCount.ToString();
     }
 
     public static void AddCoin(int amount)
