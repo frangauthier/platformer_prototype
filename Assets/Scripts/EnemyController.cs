@@ -6,22 +6,29 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] float maxHealth = 1f;
     [SerializeField] float enemyDamage = 1f;
-    // [SerializeField] HealthBar healthBar;
+    [SerializeField] bool hasHealth = false;
+    [SerializeField] HealthBar healthBar;
     // Start is called before the first frame update
     float currentHealth;
 
-    private void Awake()
+    private void Start()
     {
         currentHealth = maxHealth;
-        //healthBar.SetHealth(currentHealth);
-        //healthBar.SetMaxHealth(maxHealth);
+        if (hasHealth)
+        {
+            healthBar.SetHealth(currentHealth);
+            healthBar.SetMaxHealth(maxHealth);
+        }
     }
     public void ChangeHealth(float changeValue)
     {
         currentHealth += changeValue;
 
         if (currentHealth <= 0) Destroy(gameObject);
-        // healthBar.SetHealth(currentHealth);
+        if (hasHealth)
+        {
+            healthBar.SetHealth(currentHealth);
+        }
     }
     public float GetHitValue()
     {

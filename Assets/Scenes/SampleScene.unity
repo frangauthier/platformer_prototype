@@ -1513,7 +1513,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.3827057, y: 1}
+    m_SensorSize: {x: 1, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1656,6 +1656,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   enemyDamage: 1
+  hasHealth: 1
+  healthBar: {fileID: 1319041813}
 --- !u!1 &1232436620
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,6 +2069,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   enemyDamage: 1
+  hasHealth: 0
+  healthBar: {fileID: 0}
 --- !u!4 &1481643782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4878833834544510073, guid: 4c1aa27d2b5f03a4b84ce4fd93791bd9, type: 3}
