@@ -122,6 +122,8 @@ public class PlayerController : MonoBehaviour
     {
         EnemyController ec = collision.gameObject.GetComponent<EnemyController>();
         if (ec != null) TakeDamage(ec.GetHitValue());
+
+       
     }
 
     private void TakeDamage(float damage)
