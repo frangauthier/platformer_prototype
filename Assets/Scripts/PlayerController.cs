@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpForce = 7f;
     [SerializeField] Transform groundChecker;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] AudioClip healthPickupSound;
+
 
     // Firing
     [SerializeField] float fireRate = 0.5f;
@@ -21,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D myRB;
     Animator myAnim;
+    
 
     float nextFire = 0f;
     bool isGrounded;
@@ -32,7 +35,7 @@ public class PlayerController : MonoBehaviour
         myRB = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
 
-        currentHealth = maxHealth;
+        currentHealth = 5;
         healthBar.SetMaxHealth(maxHealth);
         healthBar.SetHealth(currentHealth);
         healthBar.Show();
@@ -120,13 +123,27 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        HealthController hc = collision.gameObject.GetComponent<HealthController>();
         EnemyController ec = collision.gameObject.GetComponent<EnemyController>();
         if (ec != null) TakeDamage(ec.GetHitValue());
+
+        if (hc != null)
+        {
+            HealUp(hc.GetAddHealth());
+            gameObject.GetComponent<AudioSource>().PlayOneShot(healthPickupSound);
+
+        }
     }
 
     private void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
+
+    private void HealUp(float health)
+    {
+        currentHealth += health;
         healthBar.SetHealth(currentHealth);
     }
 }
