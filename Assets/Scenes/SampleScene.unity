@@ -1270,7 +1270,6 @@ GameObject:
   - component: {fileID: 1095746080}
   - component: {fileID: 1095746085}
   - component: {fileID: 1095746086}
-  - component: {fileID: 1095746087}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1443,14 +1442,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!81 &1095746087
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095746079}
-  m_Enabled: 1
 --- !u!1 &1118112573
 GameObject:
   m_ObjectHideFlags: 0
